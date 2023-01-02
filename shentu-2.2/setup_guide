@@ -32,7 +32,7 @@ shentud tendermint unsafe-reset-all
 
 wget -O - https://allthatnode-eu.ams3.digitaloceanspaces.com/shentu/shentu-mainnet-pruned-20221203-0002.tar.lz4 | lz4 -d | tar -xvf - $HOME/.shentud/
 
-SEEDS=3fddc0e55801f89f27a1644116e9ddb16a951e80@3.80.87.219:26656,4814cb067fe0aef705c4d304f0caa2362b7c4246@54.167.122.47:26656,f42be55f76b7d3425f493e54d043e65bfc6f43cb@54.227.66.150:26656,3edd4e16b791218b623f883d04f8aa5c3ff2cca6@shentu-seed.panthea.eu:36656
+SEEDS=3fddc0e55801f89f27a1644116e9ddb16a951e80@3.80.87.219:26656,4814cb067fe0aef705c4d304f0caa2362b7c4246@54.167.122.47:26656,f42be55f76b7d3425f493e54d043e65bfc6f43cb@54.227.66.150:26656,6efbe63017c90cb3e52ae78ba1014ec66516d08c@seed-shentu.starsquid.io:15604,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14056,3edd4e16b791218b623f883d04f8aa5c3ff2cca6@shentu-seed.panthea.eu:36656
 
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.shentud/config/config.toml
 
